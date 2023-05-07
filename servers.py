@@ -7,7 +7,7 @@ class CMEModule:
       Module by CyberCelt
 
       Initial module:
-        https://github.com/ShutdownRepo/CrackMapExec-MachineAccountQuota
+        https://github.com/Cyb3rC3lt/CrackMapExec-Modules
 
       Authors:
         Shutdown: @Cyb3rCelt
@@ -24,8 +24,6 @@ class CMEModule:
     multiple_hosts = False
 
     def on_login(self, context, connection):
-        domain = connection.domain
-        ldap_domain = domain.replace(".",",dc=")
 
         # Building the search filter
         searchFilter = "(&(objectCategory=computer)(operatingSystem=*server*))"
