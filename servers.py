@@ -8,9 +8,6 @@ class CMEModule:
 
       Initial module:
         https://github.com/Cyb3rC3lt/CrackMapExec-Modules
-
-      Authors:
-        Shutdown: @Cyb3rCelt
     '''
 
     def options(self, context, module_options):
