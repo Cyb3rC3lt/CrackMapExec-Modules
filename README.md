@@ -23,7 +23,7 @@ Returns Domain Controllers
 
 Returns Servers
 
-`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M Server`
+`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M Servers`
 
 # Results
 
