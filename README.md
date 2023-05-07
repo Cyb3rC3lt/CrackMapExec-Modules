@@ -15,15 +15,15 @@ To run these is very easy:
 
 Returns Domain Admins
 
-`crackmapexec ldap $DC-IP -u Username -P Password -M DA`
+`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M DA`
 
 Returns Domain Controllers
 
-`crackmapexec ldap $DC-IP -u Username -P Password -M DC`
+`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M DC`
 
 Returns Servers
 
-`crackmapexec ldap $DC-IP -u Username -P Password -M Server`
+`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M Server`
 
 # Results
 
