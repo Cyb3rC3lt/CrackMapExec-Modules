@@ -35,4 +35,5 @@ Output of their results are shown below:
 **Domain Controllers**
 <img alt="da" src="/images/DC.jpg"/>
 
-
+**Servers (Example showing when there is a Machine object described as Server but it's not online)**
+<img alt="da" src="/images/Server.jpg"/>
