@@ -3,6 +3,7 @@
 import socket
 
 class CMEModule:
+
     '''
       Module by CyberCelt
 
@@ -14,16 +15,18 @@ class CMEModule:
         pass
 
 
-    name = 'SERVERS'
-    description = 'Retrieves the Servers within a domain'
+    name = 'DC'
+    description = 'Retrieves the Domain Controllers within a domain'
     supported_protocols = ['ldap']
     opsec_safe = True
     multiple_hosts = False
 
     def on_login(self, context, connection):
+        domain = connection.domain
+        ldap_domain = domain.replace(".",",dc=")
 
         # Building the search filter
-        searchFilter = "(&(objectCategory=computer)(operatingSystem=*server*))"
+        searchFilter = "(primaryGroupID=516)"
 
         try:
             context.log.debug('Search Filter=%s' % searchFilter)
@@ -40,7 +43,7 @@ class CMEModule:
                 return False
 
         answers = []
-        context.log.debug('Total of records returned %d' % len(resp))
+        context.log.debug('Total no. of records returned %d' % len(resp))
         for item in resp:
             if isinstance(item, ldapasn1_impacket.SearchResultEntry) is not True:
                 continue
@@ -56,7 +59,44 @@ class CMEModule:
                 context.log.debug('Skipping item, cannot process due to error %s' % str(e))
                 pass
         if len(answers) > 0:
-            context.log.success('Found the following Servers: ')
+            context.log.success('Found the following Domain Controllers: ')
             for answer in answers:
-                IP = socket.gethostbyname(answer[0])
-                context.log.highlight(u'{} ({})'.format(answer[0],IP))
+                try:
+                 IP = socket.gethostbyname(answer[0])
+                 context.log.highlight(u'{} ({})'.format(answer[0],IP))
+                 context.log.debug('IP found')
+                except socket.gaierror as e:
+                 context.log.debug('Missing IP')
+                 context.log.highlight(u'{} ({})'.format(answer[0],"No IP Found"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
