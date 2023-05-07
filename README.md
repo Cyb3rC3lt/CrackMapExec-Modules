@@ -11,7 +11,7 @@ Place them in: `~/.cme/modules`
 
 # Usage
 
-To run these is very easy:
+To run them is very easy:
 
 **Returns Domain Admins**
 
