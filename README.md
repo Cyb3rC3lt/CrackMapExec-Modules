@@ -7,7 +7,7 @@ Likewise if you ever wanted a list of the domain controllers and machines descri
 
 # Installation
 
-Place them in: ~/.cme/modules
+Place them in: `~/.cme/modules`
 
 # Usage
 
