@@ -13,13 +13,16 @@ Place them in ~/.cme/modules
 
 To run these is very easy:
 
-Domain Admins
+Returns Domain Admins
+
 `crackmapexec ldap $DC-IP -u Username - P Password -M DA`
 
-Domain Controllers
+Returns Domain Controllers
+
 `crackmapexec ldap $DC-IP -u Username - P Password -M DC`
 
-Servers
+Returns Servers
+
 `crackmapexec ldap $DC-IP -u Username - P Password -M Server`
 
 # Results
