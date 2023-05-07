@@ -19,7 +19,7 @@ Returns Domain Admins
 
 Returns Domain Controllers
 
-`crackmapexec ldap $DC-IP -u Username -ScreenName P Password -M DC`
+`crackmapexec ldap $DC-IP -u Username -P Password -M DC`
 
 Returns Servers
 
