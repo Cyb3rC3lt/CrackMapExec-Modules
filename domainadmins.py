@@ -6,10 +6,7 @@ class CMEModule:
       Module by CyberCelt
 
       Initial module:
-        https://github.com/ShutdownRepo/CrackMapExec-MachineAccountQuota
-
-      Authors:
-        Shutdown: @Cyb3rCelt
+        https://github.com/Cyb3rC3lt/CrackMapExec-Modules
     '''
 
     def options(self, context, module_options):
