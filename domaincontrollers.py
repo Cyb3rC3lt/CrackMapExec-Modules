@@ -3,6 +3,7 @@
 import socket
 
 class CMEModule:
+
     '''
       Module by CyberCelt
 
@@ -42,7 +43,7 @@ class CMEModule:
                 return False
 
         answers = []
-        context.log.debug('Total of records returned %d' % len(resp))
+        context.log.debug('Total no. of records returned %d' % len(resp))
         for item in resp:
             if isinstance(item, ldapasn1_impacket.SearchResultEntry) is not True:
                 continue
@@ -60,8 +61,13 @@ class CMEModule:
         if len(answers) > 0:
             context.log.success('Found the following Domain Controllers: ')
             for answer in answers:
-                IP = socket.gethostbyname(answer[0])
-                context.log.highlight(u'{} ({})'.format(answer[0],IP))
+                try:
+                 IP = socket.gethostbyname(answer[0])
+                 context.log.highlight(u'{} ({})'.format(answer[0],IP))
+                 context.log.debug('IP found')
+                except socket.gaierror as e:
+                 context.log.debug('Missing IP')
+                 context.log.highlight(u'{} ({})'.format(answer[0],"No IP Found"))
 
 
 
