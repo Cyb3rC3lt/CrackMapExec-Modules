@@ -29,4 +29,10 @@ Returns Servers
 
 Output of their results are shown below:
 
+**Domain Admins**
+<img alt="da" src="/images/DA.jpg"/>
+
+**Domain Controllers**
+<img alt="da" src="/images/DC.jpg"/>
+
 
