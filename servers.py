@@ -3,7 +3,6 @@
 import socket
 
 class CMEModule:
-
     '''
       Module by CyberCelt
 
@@ -15,18 +14,16 @@ class CMEModule:
         pass
 
 
-    name = 'DC'
-    description = 'Retrieves the Domain Controllers within a domain'
+    name = 'SERVERS'
+    description = 'Retrieves the Servers within a domain'
     supported_protocols = ['ldap']
     opsec_safe = True
     multiple_hosts = False
 
     def on_login(self, context, connection):
-        domain = connection.domain
-        ldap_domain = domain.replace(".",",dc=")
 
         # Building the search filter
-        searchFilter = "(primaryGroupID=516)"
+        searchFilter = "(&(objectCategory=computer)(operatingSystem=*server*))"
 
         try:
             context.log.debug('Search Filter=%s' % searchFilter)
@@ -59,7 +56,7 @@ class CMEModule:
                 context.log.debug('Skipping item, cannot process due to error %s' % str(e))
                 pass
         if len(answers) > 0:
-            context.log.success('Found the following Domain Controllers: ')
+            context.log.success('Found the following Servers: ')
             for answer in answers:
                 try:
                  IP = socket.gethostbyname(answer[0])
@@ -68,35 +65,3 @@ class CMEModule:
                 except socket.gaierror as e:
                  context.log.debug('Missing IP')
                  context.log.highlight(u'{} ({})'.format(answer[0],"No IP Found"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
