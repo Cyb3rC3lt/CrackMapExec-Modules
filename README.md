@@ -21,7 +21,7 @@ To run them is very easy:
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUPMEM -o GROUP="domain controllers"`
 
-**MACHINE-DESC Module - Returns Servers**
+**MACHINE-DESC Module - Returns machines with 'server' in their description**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M MACHINE-DESC -o DESC="server"`
 
