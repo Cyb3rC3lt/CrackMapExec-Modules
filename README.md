@@ -29,12 +29,20 @@ To run them is very easy:
 
 Output of their results are shown below:
 
-**Domain Admins and Domain Controllers returned**
-<img alt="da" src="/images/GROUPMEM.jpg"/>
+**Domain Computers returned**
+This example shows an example of specifying an incorrect group name 'Computers' and the error handlinh in place. 
+Then a correct computers group being specified.
+
+<img alt="da" src="/images/COMPUTERS.jpg"/>
+
+**Domain Controllers and Domain Admins returned**
+
+<img alt="da" src="/images/DCDA.jpg"/>
 
 
-**Servers Returned**
+**Servers matching the supplied decription returned from the MACHINE-DESC module**
 
-Example shows a scenario returning a Machine object described with the word 'Server' or '10'. If the IP can be retrieved it will also do so.
+This example shows a scenario returning a Machine object described with the word 'Server' or '10'. 
+If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/MACHINE-DESC.jpg"/>
