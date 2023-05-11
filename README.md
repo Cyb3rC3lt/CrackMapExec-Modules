@@ -1,7 +1,7 @@
 # CrackMapExec LDAP Modules
 Here are some CME LDAP modules I created to help with AD enumeration. 
 
-If you ever wanted to know who the Domain Admins are quickly without building an ldap search string or starting up BloodHound then the 'GROUPMEM' module is for you. 
+If you ever wanted to know who the Domain Admins are quickly without building an ldap search string or starting up BloodHound then the 'GROUP-MEM' module is for you. 
 
 Likewise if you ever wanted a list of machines described as 'Server' to focus your attack on, then the 'MACHINE-DESC' module is for you. 
 
