@@ -36,7 +36,7 @@ Then a correct computers group named 'Domain Computers' being specified.
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
 
-**GROUP-MEM Module: Returning Domain Controllers and Domain Admins**
+**Returning Domain Controllers and Domain Admins**
 
 <img alt="da" src="/images/DCDA.jpg"/>
 
