@@ -25,11 +25,11 @@ To run them is very easy:
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M COMP-DESC -o DESC="server"`
 
-# Results
+# GROUP-MEM Results
 
 Examples of the output from these commands are shown below:
 
-**GROUP-MEM Module: Returning Domain Computers**
+**Returning Domain Computers**
 
 This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
 Then a correct computers group named 'Domain Computers' being specified.
@@ -41,15 +41,17 @@ Then a correct computers group named 'Domain Computers' being specified.
 <img alt="da" src="/images/DCDA.jpg"/>
 
 
+# COMP-DESC Results 
 
-**COMP-DESC Module: Returning Servers matching the supplied description**
+
+**Returning Servers matching the supplied description**
 
 This example displays 2 scenarios returning a Computer object described with the word 'Server' and '10'. 
 If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/COMP-DESC.jpg"/>
 
-**COMP-DESC Module: Returning a failed server lookup which illustrates its error handling**
+**Returning a failed server lookup which illustrates its error handling**
 
 This example shows a scenario of a Computer object described with the word 'z' being unable to be found. 
 
