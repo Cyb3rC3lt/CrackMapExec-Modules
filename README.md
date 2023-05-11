@@ -49,7 +49,7 @@ If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/COMP-DESC.jpg"/>
 
-**COMP-DESC Module: Returning a failed server lookup which illustrates some error handling**
+**COMP-DESC Module: Returning a failed server lookup which illustrates its error handling**
 
 This example shows a scenario of a Computer object described with the word 'z' being unable to be found. 
 
