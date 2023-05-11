@@ -33,6 +33,8 @@ MACHINE-DESC Module
 
 Output of their results are shown below:
 
+GROUPMEM Module
+
 **Domain Computers returned**
 
 This example shows an example of specifying an incorrect group name 'Computers' and the error handlinh in place. 
@@ -44,6 +46,7 @@ Then a correct computers group being specified.
 
 <img alt="da" src="/images/DCDA.jpg"/>
 
+MACHINE-DESC Module
 
 **Servers matching the supplied decription returned from the MACHINE-DESC module**
 
@@ -51,3 +54,9 @@ This example shows a scenario returning a Machine object described with the word
 If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/MACHINE-DESC.jpg"/>
+
+**Failed server lookup displaying error handling**
+
+This example shows a scenario returning a Machine object described with the word 'z' can't be found. 
+
+<img alt="da" src="/images/MACHINE-DESC-FAIL.jpg"/>
