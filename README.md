@@ -31,7 +31,7 @@ Output of their results are shown below:
 
 **GROUPMEM Module - Domain Computers returned**
 
-This example shows an example of specifying an incorrect group name 'Computers' and the error handlinh in place. 
+This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
 Then a correct computers group being specified.
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
@@ -51,6 +51,6 @@ If the IP can be retrieved it will also do so.
 
 **MACHINE-DESC Module - Failed server lookup displaying error handling**
 
-This example shows a scenario returning a Machine object described with the word 'z' can't be found. 
+This example shows a scenario of a Machine object described with the word 'z' that can't be found. 
 
 <img alt="da" src="/images/MACHINE-DESC-FAIL.jpg"/>
