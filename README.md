@@ -42,7 +42,7 @@ Then a correct computers group named 'Domain Computers' being specified.
 
 
 
-**MACHINE-DESC Module: Returning Servers matching the supplied decription**
+**MACHINE-DESC Module: Returning Servers matching the supplied description**
 
 This example shows a scenario returning a Machine object described with the word 'Server' or '10'. 
 If the IP can be retrieved it will also do so.
