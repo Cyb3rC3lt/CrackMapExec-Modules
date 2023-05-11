@@ -51,6 +51,6 @@ If the IP can be retrieved it will also do so.
 
 **COMP-DESC Module: Returning a failed server lookup which illustrates some error handling**
 
-This example shows a scenario of a COmputer object described with the word 'z' being unable to be found. 
+This example shows a scenario of a Computer object described with the word 'z' being unable to be found. 
 
 <img alt="da" src="/images/COMP-DESC-FAIL.jpg"/>
