@@ -27,7 +27,7 @@ To run them is very easy:
 
 # Results
 
-Output of their results are shown below:
+Examples of the output from these commands are shown below:
 
 **GROUP-MEM Module: Returning Domain Computers**
 
