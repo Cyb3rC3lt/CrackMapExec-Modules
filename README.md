@@ -13,6 +13,8 @@ Place them in: `~/.cme/modules`
 
 To run them is very easy:
 
+GROUPMEM Module
+
 **Returns Domain Admins**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUPMEM -o GROUP="domain admins"`
@@ -20,6 +22,8 @@ To run them is very easy:
 **Returns Domain Controllers**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUPMEM -o GROUP="domain controllers"`
+
+MACHINE-DESC Module
 
 **Returns Servers**
 
