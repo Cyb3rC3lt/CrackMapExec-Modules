@@ -13,11 +13,11 @@ Place them in: `~/.cme/modules`
 
 To run them is very easy:
 
-**GROUPMEM Module: Returning Domain Admins**
+**GROUP-MEM Module: Returning Domain Admins**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUP-MEM -o GROUP="domain admins"`
 
-**GROUPMEM Module:  Returning Domain Controllers**
+**GROUP-MEM Module:  Returning Domain Controllers**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUP-MEM -o GROUP="domain controllers"`
 
@@ -29,14 +29,14 @@ To run them is very easy:
 
 Output of their results are shown below:
 
-**GROUPMEM Module: Returning Domain Computers**
+**GROUP-MEM Module: Returning Domain Computers**
 
 This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
 Then a correct computers group named 'Domain Computers' being specified.
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
 
-**GROUPMEM Module: Returning Domain Controllers and Domain Admins**
+**GROUP-MEM Module: Returning Domain Controllers and Domain Admins**
 
 <img alt="da" src="/images/DCDA.jpg"/>
 
