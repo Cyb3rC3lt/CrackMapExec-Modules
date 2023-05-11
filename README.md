@@ -3,7 +3,7 @@ Here are some CME LDAP modules I created to help with AD enumeration.
 
 If you ever wanted to know who the Domain Admins are quickly without building an ldap search string or starting up BloodHound then the 'GROUP-MEM' module is for you. 
 
-Likewise if you ever wanted a list of machines described as 'Server' or some other decription of your choice then the 'MACHINE-DESC' module is for you. 
+Likewise if you ever wanted a list of machines described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
 
 # Installation
 
@@ -21,9 +21,9 @@ To run them is very easy:
 
 `crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUP-MEM -o GROUP="domain controllers"`
 
-**MACHINE-DESC Module: Returning machines with 'server' in their description**
+**COMP-DESC Module: Returning Computers with 'server' in their description**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M MACHINE-DESC -o DESC="server"`
+`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M COMP-DESC -o DESC="server"`
 
 # Results
 
@@ -42,15 +42,15 @@ Then a correct computers group named 'Domain Computers' being specified.
 
 
 
-**MACHINE-DESC Module: Returning Servers matching the supplied description**
+**COMP-DESC Module: Returning Servers matching the supplied description**
 
-This example shows a scenario returning a Machine object described with the word 'Server' or '10'. 
+This example shows a scenario returning a Computer object described with the word 'Server' or '10'. 
 If the IP can be retrieved it will also do so.
 
-<img alt="da" src="/images/MACHINE-DESC.jpg"/>
+<img alt="da" src="/images/COMP-DESC.jpg"/>
 
-**MACHINE-DESC Module: Returning a failed server lookup which illustrates some error handling**
+**COMP-DESC Module: Returning a failed server lookup which illustrates some error handling**
 
-This example shows a scenario of a Machine object described with the word 'z' being unable to be found. 
+This example shows a scenario of a COmputer object described with the word 'z' being unable to be found. 
 
-<img alt="da" src="/images/MACHINE-DESC-FAIL.jpg"/>
+<img alt="da" src="/images/COMP-DESC-FAIL.jpg"/>
