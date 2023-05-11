@@ -30,6 +30,7 @@ To run them is very easy:
 Output of their results are shown below:
 
 **Domain Computers returned**
+
 This example shows an example of specifying an incorrect group name 'Computers' and the error handlinh in place. 
 Then a correct computers group being specified.
 
