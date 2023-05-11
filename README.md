@@ -36,4 +36,4 @@ Output of their results are shown below:
 **Servers Returned** 
 Example shows a scenarion when a Machine object described as a 'Server' exists but it's not online
 
-<img alt="da" src="/images/MACHINEDESC.jpg"/>
+<img alt="da" src="/images/MACHINE-DESC.jpg"/>
