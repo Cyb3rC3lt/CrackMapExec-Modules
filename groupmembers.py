@@ -40,6 +40,9 @@ class CMEModule:
         attribute = "objectSid"
 
         searchResult = doSearch(self, context, connection, searchFilter, attribute)
+        #if no SID for the Group is returned exit the program
+        if searchResult is None:
+            return True
 
         # Convert the binary SID to a primaryGroupID string to be used further
         sidString = sid_to_str(searchResult).split("-")
@@ -99,9 +102,12 @@ def doSearch(self,context, connection,searchFilter,attributeName):
                 context.log.highlight(u'{}'.format(answer[0]))
         else:
             # If no results at this stage and the group name is correct, check for machine accounts
-            searchFilter = "(primaryGroupID="+self.primaryGroupID+")"
-            attribute = "dNSHostName"
-            doSearch(self, context, connection, searchFilter, attribute)
+            if self.primaryGroupID != '':
+             searchFilter = "(primaryGroupID="+self.primaryGroupID+")"
+             attribute = "dNSHostName"
+             doSearch(self, context, connection, searchFilter, attribute)
+            else:
+                context.log.success('Unable to find any members of the ' + self.GROUP + ' group:')
 
     except ldap_impacket.LDAPSearchError as e:
         logging.debug(e)
