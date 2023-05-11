@@ -34,6 +34,6 @@ Output of their results are shown below:
 
 
 **Servers Returned** 
-Example shows a scenarion when a Machine object described as a 'Server' exists but it's not online
+Example shows a scenario returning a Machine object described with the word 'Server' or '10'. If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/MACHINE-DESC.jpg"/>
