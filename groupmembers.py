@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import struct
 import sys
+sys.setrecursionlimit(10000)
 from binascii import b2a_hex
 
 class CMEModule:
@@ -33,8 +34,6 @@ class CMEModule:
             exit(1)
 
     def on_login(self, context, connection):
-        domain = connection.domain
-        ldap_domain = domain.replace(".", ",dc=")
 
         #First look up the SID of the group passed in
         searchFilter = "(&(objectCategory=group)(cn=" + self.GROUP + "))"
@@ -46,19 +45,24 @@ class CMEModule:
         sidString = sid_to_str(searchResult).split("-")
         self.primaryGroupID = sidString[-1]
 
+        #Look up the groups DN
+        searchFilter = "(&(objectCategory=group)(cn=" + self.GROUP + "))"
+        attribute = "distinguishedName"
+
+        distinguishedName = (doSearch(self, context, connection, searchFilter, attribute)).decode("utf-8")
+
         # If the primaryGroupID relates to Domain Users or Guests use this unique filter
         if self.primaryGroupID == "513" or self.primaryGroupID == "514":
-            searchFilter = "(|(memberOf=cn=Users)(primaryGroupID=" + self.primaryGroupID + "))"
+            searchFilter = "(|(memberOf="+distinguishedName+")(primaryGroupID="+self.primaryGroupID+"))"
+            #searchFilter = "(|(memberOf=cn=Users)(primaryGroupID=" + self.primaryGroupID + "))"
             attribute = "sAMAccountName"
             searchResult = doSearch(self, context, connection, searchFilter, attribute)
 
         # Else If the primaryGroupID belongs to another group use the normal lookup
         else:
-            searchFilter = "(&(objectCategory=user)(memberOf=cn="+self.GROUP+",ou=Groups,dc="+ldap_domain+"))"
-            searchFilter = "(&(objectClass=group)(cn=" + self.GROUP + ",cn=Users,dc=" + ldap_domain + "))"
+            searchFilter = "(&(objectCategory=user)(memberOf="+distinguishedName+"))"
             attribute = "sAMAccountName"
             searchResult = doSearch(self, context, connection, searchFilter, attribute)
-
 
 def doSearch(self,context, connection,searchFilter,attributeName):
     try:
@@ -76,6 +80,9 @@ def doSearch(self,context, connection,searchFilter,attributeName):
                 for attribute in item['attributes']:
                     if str(attribute['type']) == attributeName:
                         if attributeName == "objectSid":
+                             attributeValue = bytes(attribute['vals'][0])
+                             return attributeValue;
+                        elif attributeName == "distinguishedName":
                              attributeValue = bytes(attribute['vals'][0])
                              return attributeValue;
                         else:
