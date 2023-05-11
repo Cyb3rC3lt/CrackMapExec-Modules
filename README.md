@@ -3,7 +3,7 @@ Here are some CME LDAP modules I created to help with AD enumeration.
 
 If you ever wanted to know who the Domain Admins are quickly without building an ldap search string or starting up BloodHound then the 'GROUP-MEM' module is for you. 
 
-Likewise if you ever wanted a list of machines described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
+Likewise if you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
 
 # Installation
 
