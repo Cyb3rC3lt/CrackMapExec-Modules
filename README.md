@@ -43,6 +43,7 @@ Then a correct computers group named 'Domain Computers' being specified.
 
 # COMP-DESC Results 
 
+Examples of the output from these commands are shown below:
 
 **Returning Servers matching the supplied description**
 
