@@ -36,6 +36,7 @@ Examples of the output from these commands are shown below:
 **Returning Domain Computers**
 
 This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
+
 Then it shows the output of when a correct computers group named 'Domain Computers' is specified. Here you can now easily verify if your **RBCD** machine EVILPC was successfully added or not. 
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
