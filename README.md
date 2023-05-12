@@ -1,7 +1,7 @@
 # CrackMapExec LDAP Modules
 Here are some CME LDAP modules I created to help with AD enumeration. 
 
-If you ever wanted to know who the Domain Admins are quickly without building an ldap search string, running ldapdomaindump or starting up BloodHound then the 'GROUP-MEM' module is for you. 
+If you ever wanted to know who the 'Domain Admins' are quickly without building an ldap search string, running ldapdomaindump or starting up BloodHound then the 'GROUP-MEM' module is for you. 
 
 GROUP-MEM helps to return all the members of any Active Directory group whether it be a group of users or computers. 
 
@@ -37,7 +37,7 @@ Examples of the output from the GROUP-MEM module are shown below:
 
 This example illustrates specifying an incorrect group name 'Computers' and the subsequent error handling in place to manage this. 
 
-Then it shows the output of when a correct computers group named 'Domain Computers' is specified. 
+Then it shows the output of when a correct 'Computers' group named 'Domain Computers' is specified. 
 
 Here you can also easily verify if any **RBCD** machine such as the EVILPC shown was successfully added or not during your testing. 
 
@@ -54,13 +54,13 @@ Examples of the output from the COMP-DESC module are shown below:
 
 **Returning Servers matching the supplied description**
 
-This example displays 2 scenarios, returning a Computer object described with the word 'Server' and also with the text '10'. 
+This example displays 2 scenarios, returning a 'Computer' object described with the word 'server' and also with the text '10'. 
 If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/COMP-DESC.jpg"/>
 
 **Returning a failed server lookup which illustrates its error handling**
 
-This example shows a scenario of a Computer object described with the word 'z' being unable to be found. 
+This example shows a scenario of a 'Computer' object described with the word 'z' which is unable to be found. 
 
 <img alt="da" src="/images/COMP-DESC-FAIL.jpg"/>
