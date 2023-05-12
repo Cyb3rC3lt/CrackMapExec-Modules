@@ -19,15 +19,15 @@ To run them is very easy:
 
 **GROUP-MEM Module: Returning Domain Admins**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUP-MEM -o GROUP="domain admins"`
+`crackmapexec ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain admins"`
 
 **GROUP-MEM Module:  Returning Domain Controllers**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M GROUP-MEM -o GROUP="domain controllers"`
+`crackmapexec ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain controllers"`
 
 **COMP-DESC Module: Returning Computers with 'server' in their description**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -d $DOMAIN -M COMP-DESC -o DESC="server"`
+`crackmapexec ldap $DC-IP -u Username -p Password -M COMP-DESC -o DESC="server"`
 
 # GROUP-MEM Results
 
