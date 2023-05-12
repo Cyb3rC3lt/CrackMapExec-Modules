@@ -29,7 +29,7 @@ To run them is very easy:
 
 `crackmapexec ldap $DC-IP -u Username -p Password -M COMP-DESC -o DESC="server"`
 
-**Usage in images**
+**Usage via the command line**
 
 <img src="/images/GROUP-MEM-OPTIONS.jpg" height="175" width="600"/>
 
