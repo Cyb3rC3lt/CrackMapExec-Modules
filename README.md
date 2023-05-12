@@ -31,9 +31,9 @@ To run them is very easy:
 
 **Usage also visible via the command line**
 
-<img src="/images/GROUP-MEM-OPTIONS.jpg" height="175" width="600"/>
+<img src="/images/GROUP-MEM-OPTIONS.jpg" height="105" width="600"/>
 
-<img src="/images/COMP-DESC-OPTIONS.jpg" height="175" width="600"/>
+<img src="/images/COMP-DESC-OPTIONS.jpg" height="105" width="600"/>
 
 
 # GROUP-MEM Results
