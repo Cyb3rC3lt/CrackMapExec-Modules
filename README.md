@@ -46,7 +46,7 @@ This example illustrates specifying an incorrect group name 'Computers' and the 
 
 Then it shows the output of when a correct 'Computers' group named 'Domain Computers' is specified. 
 
-Here you can also easily verify if any **RBCD** machine such as the EVILPC shown was successfully added or not during your testing. 
+Here you can also easily verify if any **RBCD** machines such as the EVILPC shown below was successfully added or not during your testing. 
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
 
