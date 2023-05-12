@@ -29,6 +29,13 @@ To run them is very easy:
 
 `crackmapexec ldap $DC-IP -u Username -p Password -M COMP-DESC -o DESC="server"`
 
+**Usage in images**
+
+<img alt="da" src="/images/GROUP-MEM-OPTIONS.jpg"/>
+
+<img alt="da" src="/images/COMP-DESC-OPTIONS.jpg"/>
+
+
 # GROUP-MEM Results
 
 Examples of the output from the GROUP-MEM module are shown below:
