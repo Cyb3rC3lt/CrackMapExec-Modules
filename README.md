@@ -31,7 +31,7 @@ To run them is very easy:
 
 # GROUP-MEM Results
 
-Examples of the output from these commands are shown below:
+Examples of the output from the GROUP-MEM module are shown below:
 
 **Returning Domain Computers**
 
@@ -48,7 +48,7 @@ Then it shows the output of when a correct computers group named 'Domain Compute
 
 # COMP-DESC Results 
 
-Examples of the output from these commands are shown below:
+Examples of the output from the COMP-DESC module are shown below:
 
 **Returning Servers matching the supplied description**
 
