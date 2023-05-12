@@ -35,7 +35,7 @@ Examples of the output from the GROUP-MEM module are shown below:
 
 **Returning Domain Computers**
 
-This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
+This example illustrates specifying an incorrect group name 'Computers' and the error handling in place. 
 
 Then it shows the output of when a correct computers group named 'Domain Computers' is specified. 
 
