@@ -54,7 +54,7 @@ Examples of the output from the COMP-DESC module are shown below:
 
 **Returning Servers matching the supplied description**
 
-This example displays 2 scenarios returning a Computer object described with the word 'Server' and '10'. 
+This example displays 2 scenarios, returning a Computer object described with the word 'Server' and also with the text '10'. 
 If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/COMP-DESC.jpg"/>
