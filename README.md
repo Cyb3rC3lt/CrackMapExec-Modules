@@ -37,7 +37,7 @@ Examples of the output from these commands are shown below:
 
 This example shows an example of specifying an incorrect group name 'Computers' and the error handling in place. 
 
-Then it shows the output of when a correct computers group named 'Domain Computers' is specified. Here you can now easily verify if any **RBCD** machine such as EVILPC was successfully added or not during your testing. 
+Then it shows the output of when a correct computers group named 'Domain Computers' is specified. Here you can now easily verify if any **RBCD** machine such as EVILPC was successfully added or not during your testing too. 
 
 <img alt="da" src="/images/COMPUTERS.jpg"/>
 
