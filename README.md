@@ -31,9 +31,9 @@ To run them is very easy:
 
 **Usage in images**
 
-<img src="/images/GROUP-MEM-OPTIONS.jpg" height="200" width="600"/>
+<img src="/images/GROUP-MEM-OPTIONS.jpg" height="175" width="600"/>
 
-<img src="/images/COMP-DESC-OPTIONS.jpg" height="200" width="600"/>
+<img src="/images/COMP-DESC-OPTIONS.jpg" height="175" width="600"/>
 
 
 # GROUP-MEM Results
