@@ -7,7 +7,7 @@ GROUP-MEM helps to return all the members of any Active Directory group whether 
 
 If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
 
-COMP-DESC searches the operating system attribute in all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
+COMP-DESC searches the operating system attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
 
 # Installation
 
