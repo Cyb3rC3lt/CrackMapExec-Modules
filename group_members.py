@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import struct
-import sys
-sys.setrecursionlimit(10000)
-from binascii import b2a_hex
+
+from impacket.ldap import ldapasn1 as ldapasn1_impacket
 
 class CMEModule:
     '''
-      Module by CyberCelt
+      Module by CyberCelt: @Cyb3rCelt
 
       Initial module:
         https://github.com/Cyb3rC3lt/CrackMapExec-Modules
@@ -48,7 +46,7 @@ class CMEModule:
             return True
 
         # Convert the binary SID to a primaryGroupID string to be used further
-        sidString = sid_to_str(searchResult).split("-")
+        sidString = connection.sid_to_str(searchResult).split("-")
         self.primaryGroupID = sidString[-1]
 
         #Look up the groups DN
@@ -60,7 +58,6 @@ class CMEModule:
         # If the primaryGroupID relates to Domain Users or Guests use this unique filter
         if self.primaryGroupID == "513" or self.primaryGroupID == "514":
             searchFilter = "(|(memberOf="+distinguishedName+")(primaryGroupID="+self.primaryGroupID+"))"
-            #searchFilter = "(|(memberOf=cn=Users)(primaryGroupID=" + self.primaryGroupID + "))"
             attribute = "sAMAccountName"
             searchResult = doSearch(self, context, connection, searchFilter, attribute)
 
@@ -70,6 +67,7 @@ class CMEModule:
             attribute = "sAMAccountName"
             searchResult = doSearch(self, context, connection, searchFilter, attribute)
 
+# Carry out an LDAP search for the Group with the supplied Group name
 def doSearch(self,context, connection,searchFilter,attributeName):
     try:
         context.log.debug('Search Filter=%s' % searchFilter)
@@ -110,41 +108,8 @@ def doSearch(self,context, connection,searchFilter,attributeName):
              attribute = "dNSHostName"
              doSearch(self, context, connection, searchFilter, attribute)
             else:
-                context.log.success('Unable to find any members of the ' + self.GROUP + ' group')
+                context.log.success('Unable to find any members of the "' + self.GROUP + '" group')
 
-    except ldap_impacket.LDAPSearchError as e:
-        logging.debug(e)
+    except Exception as e:
+        context.log.debug("Exception:", e)
         return False
-
-def sid_to_str(sid):
-    try:
-        # Python 3
-        if str is not bytes:
-            # revision
-            revision = int(sid[0])
-            # count of sub authorities
-            sub_authorities = int(sid[1])
-            # big endian
-            identifier_authority = int.from_bytes(sid[2:8], byteorder='big')
-            # If true then it is represented in hex
-            if identifier_authority >= 2 ** 32:
-                identifier_authority = hex(identifier_authority)
-
-            # loop over the count of small endians
-            sub_authority = '-' + '-'.join([str(int.from_bytes(sid[8 + (i * 4): 12 + (i * 4)], byteorder='little')) for i in range(sub_authorities)])
-        # Python 2
-        else:
-            revision = int(b2a_hex(sid[0]))
-            sub_authorities = int(b2a_hex(sid[1]))
-            identifier_authority = int(b2a_hex(sid[2:8]), 16)
-            if identifier_authority >= 2 ** 32:
-                identifier_authority = hex(identifier_authority)
-
-            sub_authority = '-' + '-'.join([str(int(b2a_hex(sid[11 + (i * 4): 7 + (i * 4): -1]), 16)) for i in range(sub_authorities)])
-        objectSid = 'S-' + str(revision) + '-' + str(identifier_authority) + sub_authority
-
-        return objectSid
-    except Exception:
-        pass
-
-    return sid
