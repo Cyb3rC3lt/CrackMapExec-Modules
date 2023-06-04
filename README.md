@@ -5,7 +5,7 @@ If you ever wanted to know who the 'Domain Admins' are quickly without building 
 
 GROUP-MEM helps to return all the members of any Active Directory group whether it be a group of users, groups or computers.
 
-if you ever wanted to easily add, or delete or a computer account then the ADD-COMPUTER module is for you. You can also update an existing computers password. 
+if you ever wanted to easily add or delete or a computer account then the ADD-COMPUTER module is for you. You can also update an existing computers password. 
 
 ADD-COMPUTER allows you to do all of the above very easily and can also use Kerberos.
 
