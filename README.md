@@ -1,9 +1,13 @@
 # CrackMapExec Modules
-Here are some CME modules I created to help with AD enumeration. 
+Here are some CME modules I created to help with AD enumeration and exploitation. 
 
 If you ever wanted to know who the 'Domain Admins' are quickly without building an ldap search string, running ldapdomaindump or starting up BloodHound then the 'GROUP-MEM' module is for you. 
 
-GROUP-MEM helps to return all the members of any Active Directory group whether it be a group of users, groups or computers. 
+GROUP-MEM helps to return all the members of any Active Directory group whether it be a group of users, groups or computers.
+
+if you ever wanted to easily add, delete or modify a computer account password then the ADD-COMPUTER module is for you.
+
+ADD-COMPUTER allows you to do all of the above very easily and can also use Kerberos.
 
 If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
 
@@ -24,6 +28,22 @@ To run them is very easy:
 **GROUP-MEM Module:  Returning Domain Controllers**
 
 `crackmapexec ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain controllers"`
+
+**ADD-COMPUTER Module:  Adding a new Computer**
+
+`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+
+**ADD-COMPUTER Module:  Adding a new Computer via Kerberos**
+
+`crackmapexec ldap $DC-IP -k -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+
+**ADD-COMPUTER Module:  Changing a Computer password**
+
+`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" CHANGEPW=TRUE`
+
+**ADD-COMPUTER Module:  Deleting a Computer**
+
+`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" DELETE=TRUE`
 
 **COMP-DESC Module: Returning Computers with 'server' in their description**
 
@@ -53,6 +73,28 @@ Here you can also easily verify if any **RBCD** machines such as the EVILPC show
 **Returning Domain Controllers and Domain Admins**
 
 <img alt="da" src="/images/DCDA.jpg"/>
+
+# ADD-COMPUTER Results
+
+Examples of the output from the ADD-COMPUTER module are shown below:
+
+**Adding a Computer with credentials and using Kerberos**
+
+<img src="/images/ADD-MACHINE.jpg"/>
+
+<img src="/images/ADD-MACHINE-KERB.jpg"/>
+
+**Changing a Computer password**
+
+<img src="/images/ADD-CHANGEPW.jpg"/>
+
+**Deleting a Computer**
+
+<img src="/images/ADD-DELETE.jpg"/>
+
+**Error handling if a Computer already exists with that name**
+
+<img src="/images/ADD-EXISTS.jpg"/>
 
 
 # COMP-DESC Results 
