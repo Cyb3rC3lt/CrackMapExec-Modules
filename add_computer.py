@@ -26,9 +26,9 @@ class CMEModule:
         PASSWORD: Specify the PASSWORD option to supply a password for the Computer to be added
         DELETE: Specify DELETE to remove a Computer
         CHANGEPW: Specify CHANGEPW to modify a Computer password
-        Usage: cme ldap $DC-IP -u Username -p Password -M ADD-COMP -o NAME="BADPC" PASSWORD="Password1"
-               cme ldap $DC-IP -u Username -p Password -M ADD-COMP -o NAME="BADPC" DELETE=True
-               cme ldap $DC-IP -u Username -p Password -M ADD-COMP -o NAME="BADPC" CHANGEPW=True
+        Usage: cme ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC" PASSWORD="Password1"
+               cme ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC" DELETE=True
+               cme ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC" CHANGEPW=True
         '''
 
         self.__baseDN = None
