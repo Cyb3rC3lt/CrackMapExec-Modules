@@ -80,9 +80,11 @@ Here you can also easily verify if any **RBCD** machines such as the EVILPC show
 
 Examples of the output from the ADD-COMPUTER module are shown below:
 
-**Adding a Computer with credentials and using Kerberos**
+**Adding a Computer with credentials, hashes or using Kerberos**
 
 <img src="/images/ADD-MACHINE.jpg"/>
+
+<img src="/images/ADD-HASH.jpg"/>
 
 <img src="/images/ADD-MACHINE-KERB.jpg"/>
 
