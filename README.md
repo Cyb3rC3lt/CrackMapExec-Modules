@@ -31,19 +31,19 @@ To run them is very easy:
 
 **ADD-COMPUTER Module:  Adding a new Computer**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
 
 **ADD-COMPUTER Module:  Adding a new Computer via Kerberos**
 
-`crackmapexec ldap $DC-IP -k -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+`crackmapexec smb $DC-IP -k -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
 
 **ADD-COMPUTER Module:  Changing a Computer password**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" CHANGEPW=TRUE`
+`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" CHANGEPW=TRUE`
 
 **ADD-COMPUTER Module:  Deleting a Computer**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" DELETE=TRUE`
+`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" DELETE=TRUE`
 
 **COMP-DESC Module: Returning Computers with 'server' in their description**
 
