@@ -76,7 +76,7 @@ class CMEModule:
         self.__doKerberos = connection.kerberos
 
         # First try to add via SAMR over SMB
-        #self.doSAMRAdd(context)
+        self.doSAMRAdd(context)
 
         # If SAMR fails now try over LDAPS
         if not self.noLDAPRequired:
