@@ -53,6 +53,8 @@ To run them is very easy:
 
 <img src="/images/GROUP-MEM-OPTIONS.jpg" width="600"/>
 
+<img src="/images/ADD-OPTIONS.jpg" width="600"/>
+
 <img src="/images/COMP-DESC-OPTIONS.jpg" width="600"/>
 
 
