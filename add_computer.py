@@ -60,7 +60,7 @@ class CMEModule:
 
     def on_login(self, context, connection):
 
-        #Set some variable
+        #Set some variables
         self.__domain = connection.domain
         self.__domainNetbios = connection.domain
         self.__kdcHost = connection.hostname + "." + connection.domain
@@ -70,10 +70,15 @@ class CMEModule:
         self.__targetIp = connection.host
         self.__port = context.smb_server_port
         self.__aesKey = context.aesKey
-        self.__lmhash = connection.lmhash
-        self.__nthash = connection.nthash
-        self.__hashes = connection.hash
+        self.__hashes = context.hash
         self.__doKerberos = connection.kerberos
+
+        if context.hash[0] is not None and ":" in context.hash[0]:
+            hashList = context.hash[0].split(":")
+            self.__nthash = hashList[-1]
+            self.__lmhash = hashList[0]
+        elif context.hash[0] is not None and ":" not in context.hash[0]:
+            self.__nthash = context.hash[0]
 
         # First try to add via SAMR over SMB
         self.doSAMRAdd(context)
