@@ -79,6 +79,7 @@ class CMEModule:
             self.__lmhash = hashList[0]
         elif context.hash[0] is not None and ":" not in context.hash[0]:
             self.__nthash = context.hash[0]
+            self.__lmhash = "00000000000000000000000000000000"
 
         # First try to add via SAMR over SMB
         self.doSAMRAdd(context)
