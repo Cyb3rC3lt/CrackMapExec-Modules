@@ -43,7 +43,7 @@ To run them is very easy:
 
 **ADD-COMPUTER Module:  Deleting a Computer**
 
-`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" -o NAME="BADPC1001" DELETE=TRUE`
+`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" -o NAME="BADPC1001" DELETE=TRUE`
 
 **COMP-DESC Module: Returning Computers with 'server' in their description**
 
