@@ -114,6 +114,6 @@ If the IP can be retrieved it will also do so.
 
 **Returning a failed server lookup which illustrates its error handling**
 
-This example shows a scenario of a 'Computer' object described with the word 'z' which is unable to be found. 
+This example shows a scenario of a 'Computer' object described with the letter 'z' which is unable to be found. 
 
 <img alt="da" src="/images/COMP-DESC-FAIL.jpg"/>
