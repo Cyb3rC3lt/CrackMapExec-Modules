@@ -23,31 +23,31 @@ To run them is very easy:
 
 **GROUP-MEM Module: Returning Domain Admins**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain admins"`
+`crackmapexec ldap $DC_IP -u Username -p Password -M GROUP-MEM -o GROUP="domain admins"`
 
 **GROUP-MEM Module:  Returning Domain Controllers**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain controllers"`
+`crackmapexec ldap $DC_IP -u Username -p Password -M GROUP-MEM -o GROUP="domain controllers"`
 
 **ADD-COMPUTER Module:  Adding a new Computer**
 
-`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+`crackmapexec smb $DC_IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
 
 **ADD-COMPUTER Module:  Adding a new Computer via Kerberos**
 
-`crackmapexec smb $DC-IP -k -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
+`crackmapexec smb $DC_IP -k -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?"`
 
 **ADD-COMPUTER Module:  Changing a Computer password**
 
-`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" CHANGEPW=TRUE`
+`crackmapexec smb $DC_IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" PASSWORD="Password1?" CHANGEPW=TRUE`
 
 **ADD-COMPUTER Module:  Deleting a Computer**
 
-`crackmapexec smb $DC-IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" DELETE=TRUE`
+`crackmapexec smb $DC_IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" DELETE=TRUE`
 
 **COMP-DESC Module: Returning Computers with 'server' in their description**
 
-`crackmapexec ldap $DC-IP -u Username -p Password -M COMP-DESC -o DESC="server"`
+`crackmapexec ldap $DC_IP -u Username -p Password -M COMP-DESC -o DESC="server"`
 
 **Usage also visible via the command line**
 
