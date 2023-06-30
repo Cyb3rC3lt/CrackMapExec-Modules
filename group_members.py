@@ -22,7 +22,7 @@ class CMEModule:
     def options(self, context, module_options):
         '''
         GROUP-MEM: Specify GROUP-MEM to call the module
-        GROUP: Specify the GROUP option to query for that groups members
+        GROUP: Specify the GROUP option to query for that group's members
         Usage: cme ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain admins"
                cme ldap $DC-IP -u Username -p Password -M GROUP-MEM -o GROUP="domain controllers"
         '''
