@@ -1,3 +1,5 @@
+**Update:** These 3 modules are now live on the CrackMapExec [repository](https://github.com/mpgn/CrackMapExec/tree/master/cme/modules).
+
 # CrackMapExec Modules
 Here are some CME modules I created to help with AD enumeration and exploitation. 
 
