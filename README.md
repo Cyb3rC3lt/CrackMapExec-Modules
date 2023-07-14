@@ -53,11 +53,11 @@ To run them is very easy:
 
 **Usage also visible via the command line**
 
-<img src="/images/GROUP-MEM-OPTIONS.jpg" width="600"/>
+<img src="/images/GROUP-MEM-OPTIONS.jpg" width="700"/>
 
-<img src="/images/ADD-OPTIONS.jpg" width="600"/>
+<img src="/images/ADD-OPTIONS.jpg" width="700"/>
 
-<img src="/images/COMP-DESC-OPTIONS.jpg" width="600"/>
+<img src="/images/COMP-DESC-OPTIONS.jpg" width="700"/>
 
 
 # GROUP-MEM Results
