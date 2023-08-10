@@ -15,10 +15,6 @@ If you ever wanted a list of Computers described as 'Server' or some other decri
 
 COMP-DESC searches the operating system attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
 
-# Installation
-
-Place them in: `~/.cme/modules`
-
 # Usage
 
 To run them is very easy:
