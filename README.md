@@ -103,16 +103,19 @@ Examples of the output from the ADD-COMPUTER module are shown below:
 
 Examples of the output from the FIND-COMPUTER module are shown below:
 
-**Returning Servers matching the supplied description**
+**Returning computers with 'server' in their name or operating system**
 
-This example displays 2 scenarios, returning a 'Computer' object described with the word 'server' and also with the text 'DC'. 
 If the IP can be retrieved it will also do so.
 
 <img alt="da" src="/images/FIND-SERVER.jpg"/>
 
+**Returning computers with DC in their name or operating system**
+
+If the IP can be retrieved it will also do so.
+
 <img alt="da" src="/images/FIND-DC.jpg"/>
 
-**Returning a failed server lookup which illustrates its error handling**
+**Returning a failed text lookup which illustrates its error handling**
 
 This example shows a scenario of a 'Computer' object described with the letter 'z' which is unable to be found. 
 
