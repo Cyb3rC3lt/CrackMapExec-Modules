@@ -13,7 +13,7 @@ ADD-COMPUTER allows you to do all of the above very easily and can also use Kerb
 
 If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'FIND-COMPUTER' module is for you. 
 
-FIND-COMPUTER searches the operating system and name attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
+FIND-COMPUTER searches the operating system and name attribute of all computer objects for any user supplied text, so we can easily return all computers that contain 'server', 'SQL' or 'DC' in those fields for example. 
 
 # Usage
 
