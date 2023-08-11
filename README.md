@@ -11,7 +11,7 @@ If you ever wanted to easily add or delete a computer account then the ADD-COMPU
 
 ADD-COMPUTER allows you to do all of the above very easily and can also use Kerberos. Thanks to the guys at impacket for the original code.
 
-If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
+If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'FIND-COMPUTER' module is for you. 
 
 FIND-COMPUTER searches the operating system and name attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
 
