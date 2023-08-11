@@ -13,7 +13,7 @@ ADD-COMPUTER allows you to do all of the above very easily and can also use Kerb
 
 If you ever wanted a list of Computers described as 'Server' or some other decription of your choice then the 'COMP-DESC' module is for you. 
 
-COMP-DESC searches the operating system attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
+FIND-COMPUTER searches the operating system and name attribute of all computer objects for any user supplied text, so we can easily return all computers that are named 'server' for example. 
 
 # Usage
 
@@ -43,9 +43,9 @@ To run them is very easy:
 
 `crackmapexec smb $DC_IP -u Username -p Password -M ADD-COMPUTER -o NAME="BADPC1001" DELETE=TRUE`
 
-**COMP-DESC Module: Returning Computers with 'server' in their description**
+**FIND-COMPUTER Module: Returning Computers with 'server' in their description**
 
-`crackmapexec ldap $DC_IP -u Username -p Password -M COMP-DESC -o DESC="server"`
+`crackmapexec ldap $DC_IP -u Username -p Password -M FIND-COMPUTER -o TEXT="server"`
 
 **Usage also visible via the command line**
 
@@ -53,7 +53,7 @@ To run them is very easy:
 
 <img src="/images/ADD-OPTIONS.jpg" width="700"/>
 
-<img src="/images/COMP-DESC-OPTIONS.jpg" width="700"/>
+<img src="/images/FIND-OPTIONS.jpg" width="700"/>
 
 
 # GROUP-MEM Results
@@ -99,19 +99,21 @@ Examples of the output from the ADD-COMPUTER module are shown below:
 <img src="/images/ADD-EXISTS.jpg"/>
 
 
-# COMP-DESC Results 
+# FIND-COMPUTER Results 
 
-Examples of the output from the COMP-DESC module are shown below:
+Examples of the output from the FIND-COMPUTER module are shown below:
 
 **Returning Servers matching the supplied description**
 
-This example displays 2 scenarios, returning a 'Computer' object described with the word 'server' and also with the text '10'. 
+This example displays 2 scenarios, returning a 'Computer' object described with the word 'server' and also with the text 'DC'. 
 If the IP can be retrieved it will also do so.
 
-<img alt="da" src="/images/COMP-DESC.jpg"/>
+<img alt="da" src="/images/FIND-SERVER.jpg"/>
+
+<img alt="da" src="/images/FIND-DC.jpg"/>
 
 **Returning a failed server lookup which illustrates its error handling**
 
 This example shows a scenario of a 'Computer' object described with the letter 'z' which is unable to be found. 
 
-<img alt="da" src="/images/COMP-DESC-FAIL.jpg"/>
+<img alt="da" src="/images/FIND-ERROR.jpg"/>
